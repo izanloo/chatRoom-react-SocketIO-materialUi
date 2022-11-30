@@ -65,7 +65,7 @@ export default function ChatRoom() {
                                 <img src={item.sender.gender === 1 ? girl : boy} className='avatar' />
                             </Box>
                             <p>
-                                <i>{location.state.name}</i>
+                                <i>{item.sender.name}</i>
                                 {item.msg}
                                 <span>
                                     <label>{item.date.split("T")[1].split(".")[0]}</label>
