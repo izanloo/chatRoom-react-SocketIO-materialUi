@@ -3,4 +3,4 @@
 
 for run project:
 folder backend: node server.js
-folder myApp:pm start
+folder myApp:npm start
