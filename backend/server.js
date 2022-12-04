@@ -7,10 +7,6 @@ app.get("/", (req, res) => {
     res.send("salam i am alive")
 });
 
-app.get("/salam", (req, res) => {
-    res.send("salam i am alive")
-});
-
 const server = app.listen(3010, () => {
     console.log("App listen to port 3010");
 });
@@ -30,6 +26,11 @@ mySocket.on("connection", (socket) => {
     socket.on("deleteMsg",(id)=>{
         mySocket.emit("deleteMsg",id)
     });
+    
+    socket.on("editMsg",(data)=>{
+        mySocket.emit("editMsg",data)
+
+    })
 
     socket.on("disconnect", () => {
         console.log("diss connect user")
